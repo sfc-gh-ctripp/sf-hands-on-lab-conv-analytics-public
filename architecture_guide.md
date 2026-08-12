@@ -135,16 +135,7 @@ $$;
 
 ### Chat with your agent
 
-Go to **Snowsight → AI & ML → Agents** and open your agent. The "Preview in Snowflake CoWork" link opens the CoWork chat interface. You can also test via SQL:
-
-```sql
-SELECT TRY_PARSE_JSON(
-  SNOWFLAKE.CORTEX.DATA_AGENT_RUN(
-    'MERIDIAN_TEAM_A_DB.AGENTS.MERIDIAN_ASSISTANT',
-    $${"messages":[{"role":"user","content":[{"type":"text","text":"What was our total revenue?"}]}]}$$
-  )
-) AS response;
-```
+Go to **Snowsight → AI & ML → Agents** and open your agent. The "Preview -> Preview in Snowflake CoWork" link opens the CoWork chat interface. Note that this Agent is also available via SQL and a REST API - for the purposes of this lab we are using the Snowflake CoWork interface.
 
 ---
 
